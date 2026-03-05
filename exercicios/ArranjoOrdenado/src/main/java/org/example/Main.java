@@ -4,7 +4,7 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        ArranjoOrdernado arranjoOrdernado = new ArranjoOrdernado(10);
+        Arranjoordernado arranjoOrdernado = new Arranjoordernado(10);
 
         arranjoOrdernado.inserir(6);
         arranjoOrdernado.inserir(9);

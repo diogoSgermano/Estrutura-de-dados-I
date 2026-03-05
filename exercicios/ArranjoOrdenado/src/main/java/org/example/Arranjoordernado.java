@@ -5,12 +5,12 @@ package org.example;
 
 import java.util.function.Consumer;
 
-public class ArranjoOrdernado {
+public class Arranjoordernado {
     private int [] arranjo;
     private int tamanho;
     private int capacidade;
 
-        public ArranjoOrdernado(int capacidade) {
+        public Arranjoordernado(int capacidade) {
             this.capacidade=capacidade;
             arranjo= new int[capacidade];
             tamanho=0;

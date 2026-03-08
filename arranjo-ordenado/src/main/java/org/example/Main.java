@@ -18,8 +18,8 @@ public class Main {
         System.out.println("===== Inserção Aleatoria crescente =====");
 
         //INSERIR NUMEROS ALEATÓRIOS 100 VEZES - CRESCENTE
-        long[] execCemVezesAleatorioASC = new long[100];
-        for(int e=0;e<100;e++){
+        long[] execCemVezesAleatorioASC = new long[10];
+        for(int e=0;e<10;e++){
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
             long inicio=System.nanoTime();
             for (int numero : numerosAleatorios) {
@@ -46,8 +46,8 @@ public class Main {
         System.out.println("===== Inserção aleatoria decrescente =====");
 
         //inserção decrescente
-        long[] execCemVezesAleatorioDESC = new long[100];
-        for(int ex=0;ex<100 ; ex++){
+        long[] execCemVezesAleatorioDESC = new long[10];
+        for(int ex=0;ex<10 ; ex++){
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
             long inicio2=System.nanoTime();
             for (int numero : numerosAleatorios) {
@@ -64,7 +64,7 @@ public class Main {
         System.out.println("Desvio padrão: " + desvioPadraoInsercaoAleatorioDESC / 1_000_000 + " ms");
 
         double tempoMedioInsercaoAleatorio=(tempoMedioInsercaoAleatorioASC+tempoMedioInsercaoAleatorioDESC)/2;
-        double desvioPadraoInsercaoAleatorio=(tempoMedioInsercaoAleatorioASC+tempoMedioInsercaoAleatorioDESC)/2;
+        double desvioPadraoInsercaoAleatorio=(desvioPadraoInsercaoAleatorioASC+desvioPadraoInsercaoAleatorioDESC)/2;
         System.out.println();
 
         System.out.println("===== Inserção sequencial crescente =====");
@@ -72,8 +72,8 @@ public class Main {
         // INSERÇÃO SEQUENCIAL - CRESCENTE E DECRESCENTE
 
         int[] numerosSequenciais = CemMilNumerosFactory.gerarCemMilNumeros();
-        long[] execCemVezesSeqASC = new long[100];
-        for(int e=0;e<100;e++){
+        long[] execCemVezesSeqASC = new long[10];
+        for(int e=0;e<10;e++){
             OrderedArrayASC arrayASC = new OrderedArrayASC(100000);
             long inicio= System.nanoTime();
             for (int numero:numerosSequenciais){
@@ -92,8 +92,8 @@ public class Main {
         System.out.println();
 
         System.out.println("===== Inserção sequencial decrescente =====");
-        long[] execCemVezesSeqDESC = new long[100];
-        for(int e=0;e<100;e++){
+        long[] execCemVezesSeqDESC = new long[10];
+        for(int e=0;e<10;e++){
             OrderedArrayDESC arrayDESC = new OrderedArrayDESC(100000);
             long inicio= System.nanoTime();
             for (int numero:numerosSequenciais){
@@ -122,8 +122,8 @@ public class Main {
         System.out.println("===== Exclusão aleatória crescente =====");
 
 //EXCLUIR NUMEROS ALEATORIOS 100 VEZES - CRESCENTE
-        long[] execCemVezesExcAleatorioASC = new long[100];
-        for(int e = 0; e < 100; e++){
+        long[] execCemVezesExcAleatorioASC = new long[10];
+        for(int e = 0; e < 10; e++){
 
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
 
@@ -161,8 +161,8 @@ public class Main {
         System.out.println("===== Exclusão aleatória decrescente =====");
 
 //EXCLUIR NUMEROS ALEATORIOS 100 VEZES - DECRESCENTE
-        long[] execCemVezesExcAleatorioDESC = new long[100];
-        for(int e = 0; e < 100; e++){
+        long[] execCemVezesExcAleatorioDESC = new long[10];
+        for(int e = 0; e < 10; e++){
 
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
 
@@ -191,7 +191,7 @@ public class Main {
         System.out.println("Desvio padrão: " + desvioPadraoExclusaoAleatoriaDESC/1_000_000+" ms");
 
         double tempoMedioExclusaoAleatoria=(tempoMedioExclusaoAleatoriaASC+tempoMedioExclusaoAleatoriaDESC)/2;
-        double desvioPadraoExclusaoAleatoria=(tempoMedioExclusaoAleatoriaASC+tempoMedioExclusaoAleatoriaDESC)/2;
+        double desvioPadraoExclusaoAleatoria=(desvioPadraoExclusaoAleatoriaASC+desvioPadraoExclusaoAleatoriaDESC)/2;
 
         System.out.println();
 
@@ -203,8 +203,8 @@ public class Main {
         numerosSequenciais = CemMilNumerosFactory.gerarCemMilNumeros();
 
 //EXCLUIR NUMEROS SEQUENCIAIS 100 VEZES - CRESCENTE
-        long[] execCemVezesExcSeqASC = new long[100];
-        for(int e = 0; e < 100; e++){
+        long[] execCemVezesExcSeqASC = new long[10];
+        for(int e = 0; e < 10; e++){
 
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
 
@@ -238,8 +238,8 @@ public class Main {
         System.out.println("===== Exclusão sequencial decrescente =====");
 
 //EXCLUIR NUMEROS SEQUENCIAIS 100 VEZES - DECRESCENTE
-        long[] execCemVezesExcSeqDESC = new long[100];
-        for(int e = 0; e < 100; e++){
+        long[] execCemVezesExcSeqDESC = new long[10];
+        for(int e = 0; e < 10; e++){
 
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
 
@@ -264,35 +264,38 @@ public class Main {
         double desvioPadraoExclusaoSequencialDESC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesExcSeqDESC);
 
         System.out.println("Tempo médio da exclusão sequencial decrescente: "+tempoMedioExclusaoSequencialDESC/1_000_000+"ms");
-        System.out.println("Desvio padrão: " + desvioPadraoExclusaoSequencialDESC+" ms");
+        System.out.println("Desvio padrão: " + desvioPadraoExclusaoSequencialDESC/1_000_000+" ms");
 
         double tempoMedioExclusaoSequencial=(tempoMedioExclusaoSequencialASC+tempoMedioExclusaoSequencialDESC)/2;
         double desvioPadraoExclusaoSequencial=(desvioPadraoExclusaoSequencialASC+desvioPadraoExclusaoSequencialDESC)/2;
         System.out.println();
         //COMPARAÇÕES
 
+        System.out.println("===== Comparações =====");
+        System.out.println("----- Inserções -----");
+        System.out.println();
         //  INSERÇÕES - INSERÇÕES ALEATORIAS:
         System.out.println("Comparação - Inserção Aleatoria [Crescente X Decrescente]");
-        System.out.println("Tempo médio: "+tempoMedioInsercaoAleatorio);
-        System.out.println("Desvio Padrão: "+desvioPadraoInsercaoAleatorio);
+        System.out.println("Tempo médio: "+tempoMedioInsercaoAleatorio/1_000_000+"ms");
+        System.out.println("Desvio Padrão: "+desvioPadraoInsercaoAleatorio/1_000_000+"ms");
         System.out.println();
 
         //  INSERÇÕES - INSERÇÕES SEQUENCIAIS:
         System.out.println("Comparação - Inserção Sequencial [Crescente X Decrescente]");
-        System.out.println("Tempo médio: "+tempoMedioInsercaoSequencial);
-        System.out.println("Desvio padrao: "+desvioPadraoInsercaoSequencial);
+        System.out.println("Tempo médio: "+tempoMedioInsercaoSequencial/1_000_000+"ms");
+        System.out.println("Desvio padrao: "+desvioPadraoInsercaoSequencial/1_000_000+"ms");
         System.out.println();
-
+        System.out.println("----- Exclusões");
         // EXCLUSÕES - EXCLUSÕES ALEATÓRIAS:
         System.out.println("Comparação - Exclusão Aleatoria [Crescente x Decrescente] ");
-        System.out.println("Tempo médio: "+tempoMedioExclusaoAleatoria);
-        System.out.println("Desvio padrão: "+desvioPadraoExclusaoAleatoria);
+        System.out.println("Tempo médio: "+tempoMedioExclusaoAleatoria/1_000_000+"ms");
+        System.out.println("Desvio padrão: "+desvioPadraoExclusaoAleatoria/1_000_000+"ms");
         System.out.println();
 
         // EXCLUSÕES - EXCLUSÕES SEQUENCIAIS:
         System.out.println("Comparação - Exclusão Sequencial [Crescente x Decrescente]");
-        System.out.println("Tempo medio: "+ tempoMedioExclusaoSequencial);
-        System.out.println("Desvio padrão: "+ desvioPadraoExclusaoSequencial);
+        System.out.println("Tempo medio: "+ tempoMedioExclusaoSequencial/1_000_000+"ms");
+        System.out.println("Desvio padrão: "+ desvioPadraoExclusaoSequencial/1_000_000+"ms");
 
 
 

@@ -2,7 +2,7 @@ package org.example;
 
 import org.example.array.OrderedArrayASC;
 import org.example.array.OrderedArrayDESC;
-import org.example.statistics.CalculoTempoMedio;
+import org.example.statistics.Calculos;
 import org.example.statistics.CemMilNumerosFactory;
 
 public class Main {
@@ -32,10 +32,10 @@ public class Main {
         }
 
         // TEMPO MEDIO
-        double tempoMedioInsercaoAleatorioASC= CalculoTempoMedio.calcularMediaTempo(execCemVezesAleatorioASC);
+        double tempoMedioInsercaoAleatorioASC= Calculos.calcularMediaTempo(execCemVezesAleatorioASC);
 
         // DESVIO PADRÃO
-        double desvioPadraoInsercaoAleatorioASC= CalculoTempoMedio.calcularDesvioPadrao(execCemVezesAleatorioASC);
+        double desvioPadraoInsercaoAleatorioASC= Calculos.calcularDesvioPadrao(execCemVezesAleatorioASC);
         System.out.println("Tempo médio da inserção crescente: "+tempoMedioInsercaoAleatorioASC/1_000_000+"ms");
 
         System.out.println("Desvio padrão: " + desvioPadraoInsercaoAleatorioASC / 1_000_000 + " ms");
@@ -58,8 +58,8 @@ public class Main {
             execCemVezesAleatorioDESC[ex]=fim2-inicio2;
             System.out.println("Execução "+(ex+1)+" :"+ execCemVezesAleatorioDESC[ex]+"ns");
         }
-        double tempoMedioInsercaoAleatorioDESC= CalculoTempoMedio.calcularMediaTempo(execCemVezesAleatorioDESC);
-        double desvioPadraoInsercaoAleatorioDESC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesAleatorioDESC);
+        double tempoMedioInsercaoAleatorioDESC= Calculos.calcularMediaTempo(execCemVezesAleatorioDESC);
+        double desvioPadraoInsercaoAleatorioDESC = Calculos.calcularDesvioPadrao(execCemVezesAleatorioDESC);
         System.out.println("Tempo médio da inserção decrescente: "+tempoMedioInsercaoAleatorioDESC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoInsercaoAleatorioDESC / 1_000_000 + " ms");
 
@@ -84,8 +84,8 @@ public class Main {
 
             System.out.println("Execução "+(e+1)+" :"+ execCemVezesSeqASC[e]+"ns");
         }
-        double tempoMedioInsercaoSequencialASC= CalculoTempoMedio.calcularMediaTempo(execCemVezesSeqASC);
-        double desvioPadraoInsercaoSequencialASC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesSeqASC);
+        double tempoMedioInsercaoSequencialASC= Calculos.calcularMediaTempo(execCemVezesSeqASC);
+        double desvioPadraoInsercaoSequencialASC = Calculos.calcularDesvioPadrao(execCemVezesSeqASC);
         System.out.println("Tempo médio da inserção crescente: "+tempoMedioInsercaoSequencialASC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoInsercaoSequencialASC / 1_000_000 + " ms");
 
@@ -104,8 +104,8 @@ public class Main {
 
             System.out.println("Execução "+(e+1)+" :"+ execCemVezesSeqDESC[e]+"ns");
         }
-        double tempoMedioInsercaoSequencialDESC= CalculoTempoMedio.calcularMediaTempo(execCemVezesSeqDESC);
-        double desvioPadraoInsercaoSequencialDESC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesSeqDESC);
+        double tempoMedioInsercaoSequencialDESC= Calculos.calcularMediaTempo(execCemVezesSeqDESC);
+        double desvioPadraoInsercaoSequencialDESC = Calculos.calcularDesvioPadrao(execCemVezesSeqDESC);
         System.out.println("Tempo médio da inserção decrescente: "+tempoMedioInsercaoSequencialDESC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoInsercaoSequencialDESC / 1_000_000 + " ms");
 
@@ -146,10 +146,10 @@ public class Main {
         }
 
 //TEMPO MEDIO
-        double tempoMedioExclusaoAleatoriaASC = CalculoTempoMedio.calcularMediaTempo(execCemVezesExcAleatorioASC);
+        double tempoMedioExclusaoAleatoriaASC = Calculos.calcularMediaTempo(execCemVezesExcAleatorioASC);
 
 //DESVIO PADRAO
-        double desvioPadraoExclusaoAleatoriaASC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesExcAleatorioASC);
+        double desvioPadraoExclusaoAleatoriaASC = Calculos.calcularDesvioPadrao(execCemVezesExcAleatorioASC);
 
         System.out.println("Tempo médio da exclusão aleatória crescente: "+tempoMedioExclusaoAleatoriaASC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoExclusaoAleatoriaASC/1_000_000+" ms");
@@ -184,8 +184,8 @@ public class Main {
             System.out.println("Execução "+(e+1)+" :"+ execCemVezesExcAleatorioDESC[e]+"ns");
         }
 
-        double tempoMedioExclusaoAleatoriaDESC = CalculoTempoMedio.calcularMediaTempo(execCemVezesExcAleatorioDESC);
-        double desvioPadraoExclusaoAleatoriaDESC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesExcAleatorioDESC);
+        double tempoMedioExclusaoAleatoriaDESC = Calculos.calcularMediaTempo(execCemVezesExcAleatorioDESC);
+        double desvioPadraoExclusaoAleatoriaDESC = Calculos.calcularDesvioPadrao(execCemVezesExcAleatorioDESC);
 
         System.out.println("Tempo médio da exclusão aleatória decrescente: "+tempoMedioExclusaoAleatoriaDESC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoExclusaoAleatoriaDESC/1_000_000+" ms");
@@ -225,8 +225,8 @@ public class Main {
             System.out.println("Execução "+(e+1)+" :"+ execCemVezesExcSeqASC[e]+"ns");
         }
 
-        double tempoMedioExclusaoSequencialASC= CalculoTempoMedio.calcularMediaTempo(execCemVezesExcSeqASC);
-        double desvioPadraoExclusaoSequencialASC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesExcSeqASC);
+        double tempoMedioExclusaoSequencialASC= Calculos.calcularMediaTempo(execCemVezesExcSeqASC);
+        double desvioPadraoExclusaoSequencialASC = Calculos.calcularDesvioPadrao(execCemVezesExcSeqASC);
 
         System.out.println("Tempo médio da exclusão sequencial crescente: "+tempoMedioExclusaoSequencialASC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoExclusaoSequencialASC/1_000_000+" ms");
@@ -260,8 +260,8 @@ public class Main {
             System.out.println("Execução "+(e+1)+" :"+ execCemVezesExcSeqDESC[e]+"ns");
         }
 
-        double tempoMedioExclusaoSequencialDESC = CalculoTempoMedio.calcularMediaTempo(execCemVezesExcSeqDESC);
-        double desvioPadraoExclusaoSequencialDESC = CalculoTempoMedio.calcularDesvioPadrao(execCemVezesExcSeqDESC);
+        double tempoMedioExclusaoSequencialDESC = Calculos.calcularMediaTempo(execCemVezesExcSeqDESC);
+        double desvioPadraoExclusaoSequencialDESC = Calculos.calcularDesvioPadrao(execCemVezesExcSeqDESC);
 
         System.out.println("Tempo médio da exclusão sequencial decrescente: "+tempoMedioExclusaoSequencialDESC/1_000_000+"ms");
         System.out.println("Desvio padrão: " + desvioPadraoExclusaoSequencialDESC/1_000_000+" ms");

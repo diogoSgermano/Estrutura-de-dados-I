@@ -18,8 +18,8 @@ public class Main {
         System.out.println("===== Inserção Aleatoria crescente =====");
 
         //INSERIR NUMEROS ALEATÓRIOS 100 VEZES - CRESCENTE
-        long[] execCemVezesAleatorioASC = new long[10];
-        for(int e=0;e<10;e++){
+        long[] execCemVezesAleatorioASC = new long[100];
+        for(int e=0;e<100;e++){
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
             long inicio=System.nanoTime();
             for (int numero : numerosAleatorios) {
@@ -46,8 +46,8 @@ public class Main {
         System.out.println("===== Inserção aleatoria decrescente =====");
 
         //inserção decrescente
-        long[] execCemVezesAleatorioDESC = new long[10];
-        for(int ex=0;ex<10 ; ex++){
+        long[] execCemVezesAleatorioDESC = new long[100];
+        for(int ex=0;ex<100 ; ex++){
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
             long inicio2=System.nanoTime();
             for (int numero : numerosAleatorios) {
@@ -72,8 +72,8 @@ public class Main {
         // INSERÇÃO SEQUENCIAL - CRESCENTE E DECRESCENTE
 
         int[] numerosSequenciais = CemMilNumerosFactory.gerarCemMilNumeros();
-        long[] execCemVezesSeqASC = new long[10];
-        for(int e=0;e<10;e++){
+        long[] execCemVezesSeqASC = new long[100];
+        for(int e=0;e<100;e++){
             OrderedArrayASC arrayASC = new OrderedArrayASC(100000);
             long inicio= System.nanoTime();
             for (int numero:numerosSequenciais){
@@ -92,8 +92,8 @@ public class Main {
         System.out.println();
 
         System.out.println("===== Inserção sequencial decrescente =====");
-        long[] execCemVezesSeqDESC = new long[10];
-        for(int e=0;e<10;e++){
+        long[] execCemVezesSeqDESC = new long[100];
+        for(int e=0;e<100;e++){
             OrderedArrayDESC arrayDESC = new OrderedArrayDESC(100000);
             long inicio= System.nanoTime();
             for (int numero:numerosSequenciais){
@@ -122,8 +122,8 @@ public class Main {
         System.out.println("===== Exclusão aleatória crescente =====");
 
 //EXCLUIR NUMEROS ALEATORIOS 100 VEZES - CRESCENTE
-        long[] execCemVezesExcAleatorioASC = new long[10];
-        for(int e = 0; e < 10; e++){
+        long[] execCemVezesExcAleatorioASC = new long[100];
+        for(int e = 0; e < 100; e++){
 
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
 
@@ -162,7 +162,7 @@ public class Main {
 
 //EXCLUIR NUMEROS ALEATORIOS 100 VEZES - DECRESCENTE
         long[] execCemVezesExcAleatorioDESC = new long[10];
-        for(int e = 0; e < 10; e++){
+        for(int e = 0; e < 100; e++){
 
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
 
@@ -203,8 +203,8 @@ public class Main {
         numerosSequenciais = CemMilNumerosFactory.gerarCemMilNumeros();
 
 //EXCLUIR NUMEROS SEQUENCIAIS 100 VEZES - CRESCENTE
-        long[] execCemVezesExcSeqASC = new long[10];
-        for(int e = 0; e < 10; e++){
+        long[] execCemVezesExcSeqASC = new long[100];
+        for(int e = 0; e < 100; e++){
 
             OrderedArrayASC arranjoASC = new OrderedArrayASC(100000);
 
@@ -238,8 +238,8 @@ public class Main {
         System.out.println("===== Exclusão sequencial decrescente =====");
 
 //EXCLUIR NUMEROS SEQUENCIAIS 100 VEZES - DECRESCENTE
-        long[] execCemVezesExcSeqDESC = new long[10];
-        for(int e = 0; e < 10; e++){
+        long[] execCemVezesExcSeqDESC = new long[100];
+        for(int e = 0; e < 100; e++){
 
             OrderedArrayDESC arranjoDESC = new OrderedArrayDESC(100000);
 

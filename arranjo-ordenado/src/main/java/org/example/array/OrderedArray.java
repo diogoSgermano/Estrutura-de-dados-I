@@ -39,6 +39,7 @@ public abstract class OrderedArray {
         }
 
         tamanho--;
+        arranjo[tamanho] = 0;
 
         return true;
     }

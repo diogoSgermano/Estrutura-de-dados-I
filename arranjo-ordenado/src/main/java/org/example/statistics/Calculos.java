@@ -1,6 +1,6 @@
 package org.example.statistics;
 
-public class CalculoTempoMedio {
+public class Calculos {
     public static double calcularMediaTempo(long[]execucoes){
         long soma=0;
         for (long e:execucoes){
